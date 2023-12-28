@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пятёрочка</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+        <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+      </svg>
+      <h1>Пятёрочка Lux</h1>
+  </header>
+
+  <div class="profile">
+    <h2>Биометрические данные</h2>
+    <form id="profileForm">
+      <label for="height">Рост (см):</label>
+      <input type="number" id="height" name="height" required>
+
+      <label for="weight">Вес (кг):</label>
+      <input type="number" id="weight" name="weight" required>
+
+      <label for="footSize">Размер стопы:</label>
+      <input type="number" id="footSize" name="footSize" required>
+
+      <label for="age">Возраст:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Пол:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">М</option>
+        <option value="female">Ж</option>
+      </select>
+      <button type="button" class="btn btn-success" onclick="saveProfile()">Сохранить</button>
+    </form>
+  </div>
+  <div class="buttons"> 
+
+    <button type="button" class="btn btn-success" onclick="sortProducts()">Сортировать товары</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
